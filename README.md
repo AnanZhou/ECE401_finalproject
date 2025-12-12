@@ -125,7 +125,7 @@ Outputs:
 
 # 🧑‍💻 Authors
 
-- *Your team members here*
+- *Anan Zhou Jiahao Huang Yuhan Lin*
 
 ---
 
