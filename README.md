@@ -125,7 +125,7 @@ Outputs:
 
 # 🧑‍💻 Authors
 
-- *Anan Zhou ;Jiahao Huang; Yuhan Lin*
+- *Anan Zhou Jiahao Huang  Yuhan Lin*
 
 ---
 
