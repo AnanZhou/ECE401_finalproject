@@ -138,7 +138,7 @@ Prediction is used to speculatively update PC; mispredictions are corrected when
     - 1.Mispredict
     - 2.Load Stall
     - 3.Prediction
-    - 4. PC + 4
+    -  PC + 4
 - Feedback Loop
     - Learn
     - Punish 
