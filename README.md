@@ -107,7 +107,6 @@ This section summarizes each major file/module and their responsibilities accord
 | Clock Frequency | 100 MHz |
 | CPI (measured) | 1.54 |
 | IPC | 0.65 |
-| Branch Prediction Accuracy | ~30–40% (baseline) |
 | Extra Cycles per Branch | 2 bubbles |
 
 Main bottleneck: control hazards — motivating the dynamic branch predictor described below.
