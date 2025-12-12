@@ -1,10 +1,10 @@
-# 🚀 RV32I RISC-V Pipelined Processor  
+#  RV32I RISC-V Pipelined Processor  
 ### *ECE 401 – Final Project*  
 *A clean, modular, 5-stage pipeline CPU with Dynamic Branch Prediction*
 
 ---
 
-## 📌 Overview
+##  Overview
 
 This project implements a **fully functional RV32I RISC-V processor** using a classic **5-stage pipeline**. The design emphasizes a clear modular layout with separate files for top-level integration, pipeline stages, storage, components, and control logic — matching the structure used in the accompanying design specification.
 
@@ -21,9 +21,9 @@ This CPU was built as part of **ECE 401 – RISC-V Processor Design**.
 
 ---
 
-## 🧩 Features
+##  Features
 
-### ✔ Complete RV32I Support
+###  Complete RV32I Support
 All integer instructions including:
 - Arithmetic/logic (R/I type)  
 - Branches and jumps  
@@ -31,19 +31,19 @@ All integer instructions including:
 - Immediate construction (LUI, AUIPC)  
 - System ops (ECALL, EBREAK)
 
-### ✔ 5-Stage Pipeline
+###  5-Stage Pipeline
 - IF: PC update, instruction fetch  
 - ID: Decode, regfile read, ImmGen  
 - EX: ALU ops, branch compare, target calc  
 - MEM: Load/store  
 - WB: Write result back to register file  
 
-### ✔ Hazard Handling
+###  Hazard Handling
 - Data hazards: Forwarding from EX/MEM and MEM/WB  
 - Load-use hazard: 1-cycle stall  
 - Control hazards: Flush on mispredict  
 
-### ✔ Dynamic Branch Prediction (Optimization)
+###  Dynamic Branch Prediction (Optimization)
 - Branch Target Buffer (BTB)  
 - 2-bit Saturating Counter (BHT) predictor  
 - Corrects EX-stage results with feedback loop  
@@ -51,7 +51,7 @@ All integer instructions including:
 
 ---
 
-# ⚙️ Project Structure (updated to match design specification)
+#  Project Structure 
 
 This section summarizes each major file/module and their responsibilities according to the provided PDF.
 
@@ -97,7 +97,7 @@ This section summarizes each major file/module and their responsibilities accord
 
 ---
 
-# 🔍 Baseline Performance
+#  Baseline Performance
 
 | Metric | Value |
 |--------|-------|
@@ -112,7 +112,7 @@ Main bottleneck: control hazards — motivating the dynamic branch predictor des
 
 ---
 
-# 🚀 Optimization: Dynamic Branch Prediction
+#  Optimization: Dynamic Branch Prediction
 
 The branch predictor implemented in this design consists of:
 
@@ -132,7 +132,7 @@ Prediction is used to speculatively update PC; mispredictions are corrected when
 
 ---
 
-# 🧑‍💻 Authors
+#  Authors
 
 - Anan Zhou
 - Jiahao Huang
