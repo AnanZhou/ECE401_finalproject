@@ -1,6 +1,6 @@
 module microprocessor_tb();
     reg clk;
-    reg [31:0] instruction; // Note: This input seems unused in your read-only memory setup
+    reg [31:0] instruction; 
     reg rst;
 
     // Instantiate the Unit Under Test (UUT)
