@@ -21,7 +21,7 @@ module memory#(
         end
     end
 
-    // === CRITICAL FIX: Asynchronous Read ===
+    // === Asynchronous Read ===
     always @(*) begin
         if (request && !we_re) begin
             data_out = mem[address];
@@ -65,7 +65,7 @@ module instruc_mem_top #(parameter INIT_MEM = 0)(
     memory #(.INIT_MEM(INIT_MEM)) u_memory (.clk(clk), .we_re(we_re), .request(request), .mask(mask), .address(address), .data_in(data_in), .data_out(data_out));
 endmodule
 
-// wrappermem (unchanged but included for completeness)
+// wrappermem 
 module wrappermem (
     input wire [31:0] data_i, input wire [1:0] byteadd, input wire [2:0] fun3, input wire mem_en, input wire Load, input wire data_valid, input wire [31:0]wrap_load_in,
     output reg [3:0] masking, output reg [31:0] data_o, output reg [31:0] wrap_load_out
@@ -86,4 +86,5 @@ module wrappermem (
             if(fun3==3'b110) wrap_load_out=wrap_load_in;
         end     
     end
+
 endmodule
