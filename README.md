@@ -132,6 +132,18 @@ Predictor outputs:
 
 Prediction is used to speculatively update PC; mispredictions are corrected when EX-stage confirms branch outcome and target.
 
+- Timing Alignment Optimization
+- Internal Forwarding
+- PC Priority Arbitration (from high to low)
+    - 1.Mispredict
+    - 2.Load Stall
+    - 3.Prediction
+    - 4. PC + 4
+- Feedback Loop
+    - Learn
+    - Punish 
+
+
 ---
 
 #  Authors
