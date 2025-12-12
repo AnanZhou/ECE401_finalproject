@@ -97,8 +97,7 @@ This section summarizes each major file/module and their responsibilities accord
 
 ---
 
-# Baseline Architecture 
-[Image]
+
 
 #  Baseline Performance
 
