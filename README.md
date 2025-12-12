@@ -53,9 +53,6 @@ All integer instructions including:
 ---
 
 
-A more detailed version (from paper diagrams) can be added as SVG if desired.
-
----
 
 # ⚙️ Baseline Architecture Summary
 
