@@ -99,14 +99,13 @@ This section summarizes each major file/module and their responsibilities accord
 
 
 
-#  Baseline Performance
+#  Baseline Performance of unoptimized version
 
 | Metric | Value |
 |--------|-------|
 | Pipeline Depth | 5 stages |
 | Clock Frequency | 100 MHz |
-| CPI (measured) | 1.54 |
-| IPC | 0.65 |
+| CPI (measured) | 2.25 |
 | Extra Cycles per Branch | 2 bubbles |
 
 Main bottleneck: control hazards — motivating the dynamic branch predictor described below.
