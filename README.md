@@ -97,6 +97,9 @@ This section summarizes each major file/module and their responsibilities accord
 
 ---
 
+# Baseline Architecture 
+[Image]
+
 #  Baseline Performance
 
 | Metric | Value |
@@ -139,3 +142,6 @@ Prediction is used to speculatively update PC; mispredictions are corrected when
 - Yuhan Lin
 
 ---
+
+# Reference
+
