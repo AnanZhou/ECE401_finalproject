@@ -1,0 +1,53 @@
+00200513  // addi x10, x0, 2
+          // x10 <- 2
+          // 测试：I-type 算术指令、立即数扩展、ALU 加法、寄存器写回
+
+00100113  // addi x2, x0, 1
+          // x2 <- 1
+          // 测试：连续算术指令在流水线中并行执行
+
+014000EF  // jal x1, 20
+          // x1 <- PC + 4
+          // PC <- PC + 20
+          // 测试：J-type 跳转、返回地址写回、控制冒险（control hazard）
+
+00810193  // addi x3, x2, 8
+          // x3 <- x2 + 8
+          // 测试：数据相关（读取 x2）、forwarding 或正确寄存器读取
+
+000012B7  // lui x5, 0x1
+          // x5 <- 0x00001000
+          // 测试：U-type 指令、立即数高位加载
+
+03000317  // auipc x6, 0x30
+          // x6 <- PC + (0x30 << 12)
+          // 测试：PC 相对寻址、ALU + PC 数据通路
+
+00A19863  // bne x3, x10, +16
+          // if (x3 != x10) PC <- PC + 16
+          // 测试：B-type 分支指令、寄存器比较、control hazard、pipeline flush
+
+00000033  // add x0, x0, x0   (NOP)
+          // 空操作
+          // 测试：flush 是否正确清除错误路径指令
+
+00210233  // add x4, x2, x2
+          // x4 <- x2 + x2
+          // 测试：R-type ALU 运算、forwarding 机制
+
+00008067  // jalr x0, x1, 0
+          // PC <- x1
+          // 测试：间接跳转、JALR 指令、control hazard、PC 重定向
+
+00352323  // sw x3, 6(x10)
+          // Mem[x10 + 6] <- x3
+          // 测试：S-type 指令、地址计算、数据存储器写操作
+
+00652383  // lw x7, 6(x10)
+          // x7 <- Mem[x10 + 6]
+          // 测试：I-type Load 指令、数据存储器读、写回通路
+
+FD1FF0EF  // jal x1, -48
+          // x1 <- PC + 4
+          // PC <- PC - 48
+          // 测试：向后跳转（loop）、负偏移跳转、control hazard、流水线稳定性
